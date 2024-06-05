@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+    <style>
+        .form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body class="container">
+    <form class="form">
+        <div>
+            <img class="mb-[50px] w-[300px]" src="./img/bookshelter.svg" alt="bookshelter">
+        </div>
+        <div>
+            <label>
+                <img class="w-8 translate-y-[37px] translate-x-[10px]" src="./img/user.svg" alt="">
+            </label>
+            <input class="input-login bg-transparent text-white placeholder-white pl-[51px] px-[13px] pr-[150px] py-3 rounded-md w-full outline-none border " type="text" placeholder="USER NAME">
+        </div>
+        <div>
+            <label>
+                <img class="w-8 translate-y-[37px] translate-x-[10px]" src="./img/lock.svg" alt="">
+            </label>
+            <input class="input-pass bg-transparent text-white placeholder-white pl-[51px] px-[13px] pr-[150px] py-3 rounded-md w-full outline-none border border-gray-300 mb-4" type="password" placeholder="PASSWORD">
+        </div>
+        <button id="loginButton" class="bg-slate-50 hover:bg-slate-200 text-sky-500 text-2xl font-medium rounded-md py-2 w-full mt-2">
+            Login
+        </button>
+    </form>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./login.js"></script>
+</body>
+</html>

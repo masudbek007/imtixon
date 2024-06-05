@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            align-items: center;
+            justify-content: space-between;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .pagination-btn.active {
+         background-color: #0D75FF;
+        color: white;
+}
+
+    </style>
+</head>
+<body class="bg-slate-100">
+    <div class="container mx-auto">
+        <header class="header flex">
+            <div class="header_img">
+                <img class="p-[20px]" src="./img/book.svg" alt="book">
+            </div>
+            <div class="heder_input">
+                <label>
+                    <img class="w-[19px] translate-y-[37px] translate-x-[65px]" src="./img/search.svg" alt="search">
+                </label>
+                <input class="mt-[5px] pl-[38px] ml-[56px] border-spacing-2 pr-[540px] pt-[10px] pb-[10px] rounded-xl outline-none bg-slate-200" type="text" placeholder="Search books">
+            </div>
+            <label>
+                <img class="w-[27px] translate-y-[40px] translate-x-[180px]" src="./img/quyosh.svg" alt="quyosh">
+                <button id="logoutButton" class="text-right bg-[#0D75FF] translate-x-[221px] text-white px-[23px] mt-[10px] h-[40px] rounded-md">
+                    Logout
+                </button>
+            </label>
+            <div class="mt-24 translate-x-[37px]">
+                <img class="translate-y-[33px] translate-x-[10px]" src="./img/calendar.svg" alt="calendar">
+                <select id="decadeSelect" class="pl-10 py-2 text-center text-white font-medium outline-none bg-[#A6B0C3] rounded"></select>
+            </div>
+        </header>
+        <main>
+            <button class="ulRezultat">
+              
+            </button>
+            <div class="flex mt-10">
+                <ul class="ulBlock ml-1 px-10 mr-[85px] bg-white">
+                    <div>
+                        <h2 class="font-semibold text-[25px] mt-[25px]">Bookmarks</h2>
+                        <p class="font-semibold text-sm w-[218px]">If you don’t like to read, you haven’t found the right book</p>
+                    </div>
+                </ul>
+                <ul class="ulList grid grid-cols-3 gap-x-10"></ul>
+                <div class="pagination mt-5 flex justify-center"></div>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" src="" alt="Book cover">
+            <p id="modalDescription"></p>
+            <p id="modalPublishedDate"></p>
+            <button id="closeModalButton">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./home.js"></script>
+</body>
+</html>
